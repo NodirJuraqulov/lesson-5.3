@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <link rel="stylesheet" href="/css/main.min.css">
+</head>
+<body>
+
+    <div onclick="closeAllPopup()" class="overlay"></div>
+
+    <header>
+        <div class="logo">
+            <button onclick="showSidebar()" class="hamburger">
+                <img src="/assets/Frame.svg" alt="">
+            </button>
+    
+            <a target="_blank" href="https://www.youtube.com/"><img src="/assets/Image (13).png" alt="https://youtube.com"></a>
+        </div>
+
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <img src="/assets/Frame (2).png" alt="">
+            <img src="/assets/Frame (3).png" alt="">
+        </div>
+
+        <div class="sign">
+            <button onclick="lightMode()" class="light">Light</button>
+            <button onclick="darkMode()" class="dark">Dark</button>
+
+            <img src="/assets/Group.svg" alt="">
+
+            <button onclick="showSignIn()">
+                <img src="/assets/Frame (1).svg" alt="">
+                <span>Sign in</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="main_video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/wC2j9LqIeyQ?si=zWQmHb94JoOeg4Y4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            
+            <h1>Serdar Ortaç Ft.Otilia - Balım</h1>
+
+            <div class="about">
+                <div class="about_left">
+                    <img src="/assets/Frame (4).png" alt="">
+
+                    <h4>NevoMusic</h4>
+
+                    <button>Subscribe</button>
+                </div>
+
+                <div class="about_right">
+                    <img src="/assets/Auto Layout Horizontal.png" alt="">
+
+                    <button onclick="showShare()">
+                        <img src="/assets/Frame (3).svg" alt="">
+
+                        <span>Share</span>
+                    </button>
+
+                    <button onclick="showDownload()">
+                        <img src="/assets/Frame (4).svg" alt="">
+
+                        <span>Save</span>
+                    </button>
+
+                    <img src="/assets/Frame (5).png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="suggestion_videos">
+            <div class="add_video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/9_A5sK1Kdzw?si=xOsFq1_kPhEsM7Cn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                <p>Xamdam Sobirov - Tentakcham</p>
+            </div>
+            <div class="add_video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/9_A5sK1Kdzw?si=xOsFq1_kPhEsM7Cn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                <p>Xamdam Sobirov - Tentakcham</p>
+            </div>
+            <div class="add_video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/9_A5sK1Kdzw?si=xOsFq1_kPhEsM7Cn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                <p>Xamdam Sobirov - Tentakcham</p>
+            </div>
+            <div class="add_video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/9_A5sK1Kdzw?si=xOsFq1_kPhEsM7Cn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                <p>Xamdam Sobirov - Tentakcham</p>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- POPUP: -->
+
+    <div class="sign-in-card">
+        <h2>Sign In</h2>
+        <form>
+            <label>
+                <span>Email</span>
+                <input type="email" placeholder="you@example.com" required />
+            </label>
+      
+            <label>
+                <span>Password</span>
+                <input type="password" placeholder="••••••••" required />
+            </label>
+      
+            <button type="submit">Sign In</button>
+      
+            <p class="signup-text">
+                Don't have an account? <a href="#">Sign Up</a>
+            </p>
+        </form>
+    </div>
+
+    <div class="share">
+        <div class="yt-share">
+            <h3>Share</h3>
+            
+            <div class="yt-share__icons">
+                <a href="#" title="Facebook">📘</a>
+                <a href="#" title="Twitter">🐦</a>
+                <a href="#" title="WhatsApp">🟢</a>
+                <a href="#" title="Telegram">📨</a>
+                <a href="#" title="Email">✉️</a>
+            </div>
+          
+            <div class="yt-share__link-box">
+                <input type="text" value="https://youtu.be/example123" readonly />
+                <button>Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="download-card">
+        <h2>🎬 Video yuklash</h2>
+    
+        <label for="quality">Sifatni tanlang:</label>
+        <select id="quality">
+          <option value="144">144p</option>
+          <option value="360">360p</option>
+          <option value="720">720p</option>
+          <option value="1080">1080p</option>
+        </select>
+    
+        <button onclick="startUpload()">Yuklashni boshlash</button>
+    
+        <div class="progress-bar">
+          <div class="progress" id="progress"></div>
+        </div>
+    
+        <p id="status">Holat: kutmoqda...</p>
+    </div>
+
+    <div class="wrapper">
+        <div class="sidebar" id="sidebar">
+            <ul>
+                <li>🏠 Bosh sahifa</li>
+                <li>🔥 Trendlar</li>
+                <li>📺 Obunalar</li>
+                <li>🎥 Videolarim</li>
+                <li>🕒 Tarix</li>
+            </ul>
+        </div>
+    </div>
+      
+      
+
+
+
+
+
+
+    <script src="/js/main.js"></script>
+
+
+    <!-- <div onclick="closeAllPopup()" class="overlay"></div>
+
+    <h2 id="text"  class="title">DOM</h2>
+
+    <button onclick="darkMode()">Dark Mode</button>
+    <button onclick="lightMode()">Light Mode</button>
+    
+    <br>
+
+    <button onclick="action()">click me</button>
+    <button onclick="reset()">reset</button>
+
+    <h2>Lorem, ipsum dolor.</h2>
+
+
+    <main>
+        <div class="container">
+            <div class="sister"></div>
+            <div class="box">
+                <h1>DOM traversing</h1>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="brother"></div>
+        </div>
+        <h3>text 111</h3>
+    </main>
+
+
+
+    
+    <div class="wrapper action">
+        <p class="title">Tayota 2020</p>
+        <p class="title">Tayota 2021</p>
+    </div>
+
+
+
+    <button onclick="showPopup()">share</button> <br>
+
+    <div class="share__popup">
+        <h2>share</h2>
+        <button onclick="hidePopup()">x</button>
+    </div>
+
+
+    <button onclick="form_p()">form show</button>
+
+    <div class="form__popup">
+        <h2>form</h2>
+        <button onclick="hide_form_p()">x</button>
+    </div>
+
+
+    <script src="./js/app.js"></script> -->
+</body>
+</html>

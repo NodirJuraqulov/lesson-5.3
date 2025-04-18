@@ -1,0 +1,337 @@
+
+.sign-in-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 400px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+    // display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    display: none;
+  
+    h2 {
+        text-align: center;
+        color: #1f2937;
+        margin-bottom: 1rem;
+    }
+  
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+  
+        label {
+            display: flex;
+            flex-direction: column;
+            font-size: 0.9rem;
+            color: #374151;
+  
+            input {
+                margin-top: 0.5rem;
+                padding: 0.75rem;
+                border: 1px solid #d1d5db;
+                border-radius: 0.5rem;
+                font-size: 1rem;
+            }
+        }
+  
+        button {
+            padding: 0.75rem;
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            
+            &:hover {
+              background-color: #2563eb;
+            }
+        }
+  
+        .signup-text {
+            text-align: center;
+            font-size: 0.875rem;
+            color: #6b7280;
+            
+            a {
+                color: #3b82f6;
+                text-decoration: none;
+                
+                &:hover {
+                  text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.showSignIn {
+    display: flex;
+}
+
+
+
+
+
+
+
+.overlay {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0002;
+    display: none;
+}
+.overlay.show {
+    display: block;
+}
+
+
+
+
+
+
+
+.share {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7); // Qoramtir orqa fon
+    // display: flex;
+    align-items: center;
+    justify-content: center;
+    // z-index: 9999;
+    display: none;
+  
+    .yt-share {
+        width: 100%;
+        max-width: 480px;
+        background: #ffffff;
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        font-family: sans-serif;
+        animation: fadeInUp 0.3s ease;
+        
+        h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: #111827;
+        }
+      
+        &__icons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+            
+            a {
+                font-size: 1.5rem;
+                text-decoration: none;
+                transition: transform 0.2s ease;
+                
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+      
+        &__link-box {
+            display: flex;
+            gap: 0.5rem;
+            
+            input {
+                flex: 1;
+                padding: 0.6rem 0.8rem;
+                border: 1px solid #d1d5db;
+                border-radius: 0.5rem;
+                font-size: 0.95rem;
+            }
+          
+            button {
+                padding: 0.6rem 1rem;
+                background-color: #3b82f6;
+                color: white;
+                border: none;
+                border-radius: 0.5rem;
+                cursor: pointer;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: #2563eb;
+                }
+            }
+        }
+    }
+}
+
+.showShare {
+    display: flex;
+}
+  
+// Kirish animatsiyasi
+// @keyframes fadeInUp {
+//     from {
+//         opacity: 0;
+//         transform: translateY(50%);
+//     }
+//     to {
+//         opacity: 1;
+//         transform: translateY(0);
+//     }
+// }
+
+
+
+
+
+
+
+
+
+$sidebar-width: 240px;
+$transition: 0.3s;
+$bg: #000000da;
+$hover: #000000ef;
+$shadow: rgba(0, 0, 0, 0.1);
+
+.wrapper {
+    position: relative;
+    color: #fff;
+
+    .menu-btn {
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        z-index: 1100;
+        font-size: 22px;
+        background: $bg;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        box-shadow: 0 0 5px $shadow;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: $sidebar-width;
+        background: $bg;
+        box-shadow: 2px 0 5px $shadow;
+        transform: translateX(-100%);
+        transition: transform $transition ease;
+        z-index: 1000;
+
+        &.open {
+            transform: translateX(0);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                padding: 15px 20px;
+                border-bottom: 1px solid #eee;
+                cursor: pointer;
+
+                &:hover {
+                  background: $hover;
+                }
+            }
+        }
+    }
+}
+
+
+
+  
+
+
+
+
+.download-card {
+    width: 300px;
+    // margin: 100px auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    text-align: center;
+    font-family: sans-serif;
+    display: none;
+  
+    h2 {
+      margin-bottom: 15px;
+    }
+  
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+  
+    select {
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+      width: 100%;
+    }
+  
+    button {
+      padding: 10px 16px;
+      background: #cc0000;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 15px;
+  
+      &:hover {
+        background: #e60000;
+      }
+    }
+  
+    .progress-bar {
+      width: 100%;
+      height: 12px;
+      background: #eee;
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 10px;
+  
+      .progress {
+        width: 0;
+        height: 100%;
+        background: #cc0000;
+        transition: width 0.1s ease-in-out;
+      }
+    }
+  
+    #status {
+      font-size: 14px;
+      color: #555;
+    }
+  }
+
+.show_download {
+    display: block;
+}
+  
+

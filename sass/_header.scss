@@ -1,0 +1,70 @@
+
+header {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    a {
+        display: flex;
+        align-items: center; 
+    }
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    input {
+        padding: 10px 460px 10px 15px;
+        border-radius: 40px;
+        height: 40px;
+    }
+}
+
+.sign {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .dark {
+        background-color: white;
+        color: black;
+        border: 0;
+        font-weight: bold;
+    }
+
+    .light {
+        background-color: black;
+        color: white;
+        border: 0;
+        font-weight: bold;
+        display: none;
+    }
+
+    .show {
+        display: inline;
+    }
+
+    .hide{
+        display: none;
+    }
+
+    button {
+        color: blue;
+        border-radius: 18px;
+        display: flex;
+        gap: 6px;
+        align-items: center;
+        padding: 5px 15px;
+        border-color: blue;
+    }
+}
