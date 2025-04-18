@@ -104,17 +104,21 @@
 
 .share {
     position: fixed;
+    top: 50%;
+    left: 50%;  
+    transform: translate(110%, 100%);
     inset: 0;
     background-color: rgba(0, 0, 0, 0.7); // Qoramtir orqa fon
     // display: flex;
     align-items: center;
     justify-content: center;
-    // z-index: 9999;
+    z-index: 9999;
     display: none;
+    max-height: 200px;
+    max-width: 480px;
   
     .yt-share {
         width: 100%;
-        max-width: 480px;
         background: #ffffff;
         border-radius: 0.75rem;
         padding: 1.5rem;
@@ -199,7 +203,7 @@
 
 $sidebar-width: 240px;
 $transition: 0.3s;
-$bg: #000000da;
+$bg: #000000fb;
 $hover: #000000ef;
 $shadow: rgba(0, 0, 0, 0.1);
 
